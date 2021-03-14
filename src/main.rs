@@ -1,6 +1,9 @@
 mod lexer;
+mod repl;
 
-use crate::lexer::*;
+use crate::repl::repl;
 fn main() {
-    println!("Hello, world!");
+    println!("Welcome to Duklin alpha");
+    println!("Starting REPL...");
+    repl();
 }

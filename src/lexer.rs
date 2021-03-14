@@ -1,5 +1,5 @@
 #[derive(PartialEq, Debug)]
-enum Token<'a> {
+pub enum Token<'a> {
     // Basic Syntax Blocks
     Assign,    // Assignment "="
     Comma,     // Separator ","
@@ -49,11 +49,11 @@ enum Token<'a> {
 }
 
 #[derive(Debug)]
-struct Lexer<'a> {
-    input: &'a str,       // Data to be lexed
-    position: usize,      // Current position being lexed
-    read_position: usize, // next position to be lexed
-    ch: char,             // current char being lexed
+pub struct Lexer<'a> {
+    input: &'a str,       // Data to be analyzed by lexer
+    position: usize,      // Current position being analyzed
+    read_position: usize, // next position to be analyzed
+    ch: char,             // current char being analyzed
 }
 
 impl<'a> Lexer<'a> {
